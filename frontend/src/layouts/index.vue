@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { MenuOption, NIcon } from 'naive-ui'
 import { RouterLink } from 'vue-router'
-import { BookOutline as BookIcon } from '@vicons/ionicons5'
+import { Map as MapIcon, BarChart as RemarkIcon,Time as TimeIcon} from '@vicons/ionicons5'
 function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
@@ -45,7 +45,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '地区排名' }
       ),
     key: 'region',
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(MapIcon),
   },
   {
     label: () =>
@@ -57,7 +57,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '评分排名' }
       ),
     key: 'remark',
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(RemarkIcon),
   },
   {
     label: () =>
@@ -69,7 +69,7 @@ const menuOptions: MenuOption[] = [
         { default: () => '时长分布' }
       ),
     key: 'time-location',
-    icon: renderIcon(BookIcon),
+    icon: renderIcon(TimeIcon),
   },
 ]
 // 从 sessionStorage 中获取活跃菜单项的值，如果不存在，则默认为 'region'
