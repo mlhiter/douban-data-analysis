@@ -1,4 +1,4 @@
-'''爬取数据'''
+"""爬取数据"""
 import requests
 from bs4 import BeautifulSoup
 import csv

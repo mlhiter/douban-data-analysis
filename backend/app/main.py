@@ -1,15 +1,15 @@
-import pandas as pd
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 
-from app.utils.drawRegion import generate_region_chart
-from app.utils.drawRemark import generate_remark_chart
-from app.utils.drawTimeLocation import generate_timeSpan_chart
+from app.db.getData import get_data_from_mysql
+from app.api.controller.generateRegionChart import generate_region_chart
+from app.api.controller.generateRemarkChart import generate_remark_chart
+from app.api.controller.generateTimeLocationChart import generate_timeSpan_chart
 
 app = FastAPI()
 
 # 如果没有header = None，会自动将第一行设置为表头哦
-data = pd.read_table('./data/movie.csv', sep=',', header=None)
+data = get_data_from_mysql()
 
 
 @app.get("/region", response_class=HTMLResponse)

@@ -8,7 +8,6 @@ def generate_timeSpan_chart(data):
     movie_duration_split = data['时长'].str.replace("\', \'", "~").str.split("~", expand=True).fillna(0)
     movie_duration_split = movie_duration_split.replace(regex={'分钟.*': ''})
     data['时长'] = movie_duration_split[0].astype("int")
-
     data['时长'].head()
 
     bins = [0, 80, 100, 120, 140, 160, 180, 240]

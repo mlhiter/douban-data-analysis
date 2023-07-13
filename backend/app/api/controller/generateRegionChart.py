@@ -21,7 +21,7 @@ def generate_region_chart(data):
         .add_yaxis('地区上映数量', country_counts.values.tolist()[-10:])
         .reversal_axis()
         .set_global_opts(
-            title_opts=opts.TitleOpts(title='地区上映电影数量'),
+            title_opts=opts.TitleOpts(title='地区上映电影数量Top10'),
             yaxis_opts=opts.AxisOpts(name='国家'),
             xaxis_opts=opts.AxisOpts(name='上映数量'),
         )
