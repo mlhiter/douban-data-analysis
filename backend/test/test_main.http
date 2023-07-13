@@ -1,0 +1,13 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/region
+Accept: text/html
+
+###
+
+GET http://127.0.0.1:8000/remark
+Accept: text/html
+
+###
+GET http://127.0.0.1:8000/time-span
+Accept: text/html
